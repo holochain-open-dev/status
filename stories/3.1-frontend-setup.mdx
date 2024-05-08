@@ -22,14 +22,14 @@ npm install @holochain-open-dev/peer-status -w ui
 
 2. If you haven't already, install and set up the [profiles module](https://holochain-open-dev.github.io/profiles).
 
-3. Connect to Holochain with the `AppAgentClient`, and create the `PeerStatusStore` with it:
+3. Connect to Holochain with the `AppClient`, and create the `PeerStatusStore` with it:
 
 ```js
 import { PeerStatusStore, PeerStatusClient } from "@holochain-open-dev/peer-status";
-import { AppWebsocket, AppAgentWebsocket } from "@holochain/client";
+import { AppWebsocket } from "@holochain/client";
 
 async function setupPeerStatusStore() {
-  const client = await AppAgentWebsocket.connect('', '')
+  const client = await AppWebsocket.connect({})
 
   // TODO: change "MY_CELL_ROLE" for the roleId that you can find in your "happ.yaml"
   return new PeerStatuStore(new PeerStatusClient(client, '<MY_CELL_ROLE>'));

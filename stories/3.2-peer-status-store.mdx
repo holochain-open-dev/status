@@ -14,10 +14,10 @@ import { PeerStatusStore, PeerStatusClient } from "@holochain-open-dev/peer-stat
 const config = {
   pingIntervalMs: 2000
 };
-const store = new PeerStatusStore(new PeerStatusClient(appAgentClient, 'my-role-name'), config);
+const store = new PeerStatusStore(new PeerStatusClient(AppClient, 'my-role-name'), config);
 ```
 
-> Learn how to setup the `AppAgentClient` object [here](https://www.npmjs.com/package/@holochain/client).
+> Learn how to setup the `AppClient` object [here](https://www.npmjs.com/package/@holochain/client).
 
 The config for the `PeerStatusStore` has these options:
 
